@@ -1,0 +1,238 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  /*min-width: 320px;
+  min-height: 100vh;*/
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.active{
+  transform: translateX(0px) !important;
+  transition: transform 0.4s ease-in-out;
+}
+.sidebar{
+  transition: all 0.4s ease-in-out;
+}
+.slider{
+  overflow-x: clip !important;
+}
+
+.container-image{
+  transition: all 1s ease;
+}
+
+
+.man-cat-container:hover > .man-cat-text{
+  transform: translateY(0px);
+}
+
+
+/*-----------------ANIMATION-------------------*/
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+.text-quicksand{
+  font-family: "Quicksand", sans-serif;
+}
+.text-montserrat{
+  font-family: "Montserrat", sans-serif;
+}
+.text-play{
+  font-family: "Play", sans-serif;
+}
+.text-rajdhani{
+  font-family: "Rajdhani", sans-serif;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------*/
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* border: 1px solid #000000; */
+  height: 20px;
+  width: 8px;
+  border-radius: 3px;
+  background: rgb(147 197 253);
+  cursor: pointer;
+  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/ /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  /* border: 1px solid #000000; */
+  height: 20px;
+  width: 8px;
+  border-radius: 3px;
+  background: rgb(147 197 253);
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  /* border: 1px solid #000000; */
+  height: 20px;
+  width: 8px;
+  border-radius: 3px;
+  background: rgb(147 197 253);
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------------------*/
+
+
+
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  /* background: #3071a9; */
+  background: #E5E7EB;
+  /* border-radius: 1.3px; */
+  /* border: 0.2px solid #010101; */
+}
+
+input[type=range]:focus::-webkit-slider-runnasble-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  /* background: #3071a9; */
+  background: #E5E7EB;
+  /* border-radius: 1.3px; */
+  /* border: 0.2px solid #010101; */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  /* border: 0.2px solid #010101; */
+  border-radius: 2.6px;
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
